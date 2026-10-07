@@ -14,7 +14,11 @@
       <h2>在借 / 逾期</h2>
       <div v-for="l in [...board.overdue, ...board.active]" :key="l.id" class="item" :class="{ overdue: l.overdue }">
         <strong>{{ l.title }}</strong> → {{ l.borrower }}
-        <div class="muted">应还 {{ l.due_date }} {{ l.overdue ? '· 逾期' : '' }}</div>
+        <div class="muted">
+          应还 {{ l.due_date }}
+          <span v-if="l.renewed_count" class="renewed-badge">自动续借 ×{{ l.renewed_count }}</span>
+          {{ l.overdue ? '· 逾期' : '' }}
+        </div>
         <button @click="ret(l.id)">归还</button>
       </div>
     </section>
