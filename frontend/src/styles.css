@@ -19,6 +19,18 @@ h1,h2 { font-family: "Libre Baskerville", Georgia, serif; }
   border: 1px solid var(--line); padding: 10px 12px; margin-bottom: 10px; background: #fff9ef;
 }
 .overdue { background: #f3d9d0; }
+.renewed { background: #e3ecd6; }
+.returned { opacity: .65; }
+.tag {
+  display: inline-block; margin-left: 6px; padding: 0 6px; font-size: 11px;
+  border: 1px solid #6f7d4f; color: #4c5a2e; border-radius: 2px; background: #eef4e2;
+}
+.empty { margin: 0 0 12px; font-size: 12px; }
+.err { color: #8a2f1e; font-size: 13px; margin-top: 6px; }
+.status-err { color: #8a2f1e; }
+.settings-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; max-width: 640px; }
+.switch { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.switch input { width: auto; margin: 0; }
 button { background: var(--accent); color: #fff; border: 1px solid var(--line); padding: 6px 12px; font: inherit; cursor: pointer; }
 input { border: 1px solid var(--line); padding: 6px 8px; font: inherit; width: 100%; margin: 4px 0 8px; background: #fff; }
 .topnav { display: flex; gap: 12px; padding: 8px 16px; border-bottom: 1px solid var(--line); font-size: 13px; }
